@@ -40,15 +40,15 @@ The library built should be scalable and secure enough to process millions of fi
 # Roadmap:
 
 1) Taking inputs of documents in different formats: Image / PDF / Word
-2) Converting the inputs to single type of format: Image
+2) Converting the inputs into a single type of format: Image.
 3) Process the Image. [^1]
 4) Use OCR to extract text. [^2]
 5) Classify the Image based on extracted text. [^3]
 6) Use the extracted text to further extract crucial data. [^4]
 
 # Steps:
-### 1) Taking inputs of documents in different formats (Image / PDF / Word) and 
-### converting them to single type of format (Image)
+### 1) Taking inputs of documents in various formats (Image / PDF / Word) and 
+### converting them into a single type of format (Image).
 ```
 function:
 (Image / PDF / Word) --> (Image)
@@ -71,15 +71,23 @@ function:
 ### 4) Classifying Images:
 
 ---
-prerequisite:
-- Unique words extracted either (manually or using TD-IDF over training dataset)
+Prerequisite:
+
+- Unique words extracted (either manually or using TD-IDF over the training dataset).
+
 - This step is totally independent of the main process.
+
 - This step is to be performed before using the main program or library
-- This step should be the prerequisite without which step 4 and above are not 
-possible.
+
+- This step should be the prerequisite without which the 4th step and above are not 
+
+  possible.
+
 - This step requires manual labelling of the type of images being fed.
+
 - Example: For Aadhar Images input Aadhar Card, Pan Card for Pan Card Images, 
-and so on.
+
+  and so on.
 ```
 function:
 (TD-IDF(list[OI], list[ET], DT)) --> ([UK] -- DT)
@@ -99,7 +107,7 @@ Loop above for list of [DT]
 ```
 
 ### 5) Extract Data:
-prerequisite:
+Prerequisite:
 Unique algorithms [UA] to extract document specific data.
 
 Extracting crucial data from [ET] based on DT and then attaching the same to
