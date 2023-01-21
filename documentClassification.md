@@ -46,6 +46,68 @@ The library built should be scalable and secure to process millions of files.
 5) Classify the Image based on extracted text. [^3]
 6) Use the extracted text to further extract crucial data. [^4]
 
+# Steps:
+### 1) Taking inputs of documents in different formats (Image / PDF / Word) and 
+### converting them to single type of format (Image)
+```
+function:
+(Image / PDF / Word) --> (Image)
+```
+
+### 2) Image Processing:
+Preparing the images for text extraction:
+```
+function: 
+(Image) --> (Extractable Image [EI], Reference to original image [OI])
+```
+
+### 3) Text Extraction:
+Using text extraction technologies to extract text from images:
+```
+function: 
+([EI], [OI]) --> (Extracted Text [ET], Reference to [OI])
+```
+
+### 4) Classifying Images:
+---
+prerequisite:
+- Unique words extracted either (manually or using TD-IDF over training dataset)
+- This step is totally independent of the main process.
+- This step is to be performed before using the main program or library
+- This step should be the prerequisite without which step 4 and above are not 
+possible.
+- This step requires manual labelling of the type of images being fed.
+- Example: For Aadhar Images input Aadhar Card, Pan Card for Pan Card Images, 
+and so on.
+```
+---
+
+function:
+(TD-IDF(list[OI], list[ET], DT)) --> ([UK] -- DT)
+```
+Classifying the [OI] based on [ET] and the unique keywords [UK] corresponding to
+the document types [DT].
+```
+function:
+(
+Loop above for list of ([UK] -- DT):
+  [ET] * [UK] --> Percentage DT;
+Loop above for list of [DT]
+  DT = Max(Percentage)
+) --> (DT, Reference to [ET], Reference to [OI])
+```
+
+### 5) Extract Data:
+prerequisite:
+Unique algorithms [UA] to extract document specific data.
+
+Extracting crucial data from [ET] based on DT and then attaching the same to
+the OI and pack them into a dictionary data type
+```
+function:
+(UA(DT, ET, OI)) --> (DICT)
+```
+
 # Footnote:
 [^1]: Image processing is the most crucial and bottleneck step of the project.
 
