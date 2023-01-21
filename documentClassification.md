@@ -115,7 +115,9 @@ function:
 [^2]: For accurate results, text extraction technologies require clean inputs.
 For this particular project, this represents another bottleneck.
 
-[^3]: For classifying images we first have to feed the algorithm with unique words. These unique words are specific to each document. To extract such unique words two methods are possible (manual input or using TD-IDF).
+[^3]: For classifying images we first have to feed the algorithm with unique words. 
+These unique words are specific to each document. 
+To extract such unique words two methods are possible (manual input or using TD-IDF).
 
 [^4]: Crucial data are subjective and differ from document to document. However, this data is common to the same type of document.
 The Aadhar number, name, DOB, etc, are crucial to the Aadhar card document.. 
