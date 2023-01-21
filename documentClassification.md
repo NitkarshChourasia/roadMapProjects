@@ -69,6 +69,7 @@ function:
 ```
 
 ### 4) Classifying Images:
+
 ---
 prerequisite:
 - Unique words extracted either (manually or using TD-IDF over training dataset)
@@ -80,11 +81,11 @@ possible.
 - Example: For Aadhar Images input Aadhar Card, Pan Card for Pan Card Images, 
 and so on.
 ```
----
-
 function:
 (TD-IDF(list[OI], list[ET], DT)) --> ([UK] -- DT)
 ```
+---
+
 Classifying the [OI] based on [ET] and the unique keywords [UK] corresponding to
 the document types [DT].
 ```
