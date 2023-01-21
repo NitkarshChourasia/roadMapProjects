@@ -1,16 +1,16 @@
 # Project Description:
 
-Financial institutions will process and keep a massive volume of consumer
+Financial institutions process and store a large volume of consumer
 documents. These documents are crucial to the company's operations, and there
 are statutory obligations on how they must be processed and stored. To identify
 the documents and extract data from them, a significant amount of human
 processing is required.
 
-1) Based on the input file, the documents must be identified, classified, and 
-divided into multiple groups. The user can submit a single file (image/pdf/word 
-document) that contains many documents. Create a library that accepts a user 
-supplied file and recognises and splits numerous documents existing in the file.
-Documents to be classified and split are:
+1) Based on the input file, the documents must be identified, classified, and
+   divided into multiple groups. The user can submit a single file (image/pdf/word
+   document) that contains many documents. Create a library that accepts a user
+   supplied file and recognises and splits numerous documents existing in the file.
+   Documents to be classified and split are:
 
 | Documents | Organization |
 | ----------- |  ----------- |
@@ -26,10 +26,10 @@ Documents to be classified and split are:
 | Voter ID | Government |
 | Passport | Government |
 
-2) Once document is classified and split, create a library which accepts split
-document and extracts the data from it.
+2) After the document is classified and split, create a library that accepts split
+   documents and extracts the data from them.
 
-The library built should be scalable and secure to process millions of files.
+The library built should be scalable and secure enough to process millions of files.
 
 # Objectives:
 
@@ -110,17 +110,14 @@ function:
 ```
 
 # Footnote:
-[^1]: Image processing is the most crucial and bottleneck step of the project.
+[^1]: The image processing step is one of the most crucial and bottleneck steps in the project.
 
-[^2]: Text Extraction technologies expect clean inputs for accurate results.
-This is another bottleneck step for this particular project.
+[^2]: For accurate results, text extraction technologies require clean inputs.
+For this particular project, this represents another bottleneck.
 
-[^3]: For classifying Images we first have to feed the algorithm with
-unique words. This unique words are document specific. To extract such unique
-words two methods are possible (manual input or using TD-IDF)
+[^3]: For classifying images we first have to feed the algorithm with unique words. These unique words are specific to each document. To extract such unique words two methods are possible (manual input or using TD-IDF).
 
-[^4]: Crucial data are subjective and differ from document to document. But this
-data is common around same type of document.
-Example: Aadhar number, Name, DOB, etc. are crucial for Aadhar document. Pan Card
-Number is specific to Pan document. Driving License number is specific to driving 
-license document, and so on.
+[^4]: Crucial data are subjective and differ from document to document. However, this data is common to the same type of document.
+The Aadhar number, name, DOB, etc, are crucial to the Aadhar card document.. 
+Pan Card Number is specific to the Pan document. 
+Driving License number is specific to driving license document, and so on.
